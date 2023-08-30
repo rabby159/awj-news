@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWJ News</title>
+
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="./images/newspaper-solid.svg" type="image/x-icon">
+
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/5be871417b.js" crossorigin="anonymous"></script>
+
+    <!-- tailwind css and daisyUi  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      .poppins{
+          font-family: 'Poppins', sans-serif;
+      }
+    </style>
+</head>
+<body class="poppins">
+    <header>
+        <section class="container mx-auto">
+            <div class="navbar bg-base-100 border-b mt-4">
+                <div class="flex-1">
+                  <a class="btn btn-ghost normal-case text-xl">AWJ News</a>
+                </div>
+                <div class="mr-5 hidden md:flex">
+                    <h1 class="mr-5 hover:border-b">News</h1>
+                    <h1 class="hover:border-b">Blog</h1>
+                </div>
+                <div class="flex-none">
+                  <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                      <div class="w-10 rounded-full">
+                        <img src="./images/me.jpg" />
+                      </div>
+                      
+                    </label>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li>
+                        <a class="justify-between">
+                          Profile
+                          <span class="badge">New</span>
+                        </a>
+                      </li>
+                      <li><a>Settings</a></li>
+                      <li><a>Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section class="container mx-auto mt-5">
+            <div>
+                <div class="tabs flex justify-around" id="tab-category">
+                   
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+      <section class="container mx-auto mt-5" >
+        <div class="flex items-center gap-5">
+          <div>
+            <h1>Shorted by view: </h1>
+          </div>
+          <select class="select select-bordered">
+            <option>Default</option>
+            <option>Most View</option>
+          </select>
+        </div>
+      </section>
+        <section class="container mx-auto">
+            <div id="news-container" class=" grid md:grid-cols-1 gap-y-10 my-10">
+               
+            </div>
+            <div id="model-container">
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./js/api.js"></script>
+</body>
+</html>
